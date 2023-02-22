@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 
 export default function OutLet({children}) {
-  const [darkTheme, setDarkTheme] = useState(true)
+  const [darkTheme, setDarkTheme] = useState(false)
 
   return (
     <>

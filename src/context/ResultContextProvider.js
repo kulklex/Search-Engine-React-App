@@ -1,12 +1,12 @@
 import React, {createContext, useContext, useState} from "react";
 
 const ResultContext = createContext()
-const baseUrl = 'https://google-search72.p.rapidapi.com'
+const baseUrl = 'https://google-search72.p.rapidapi.comn'
 
 export const ResultContextProvider = ({children}) => {
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('Google Search Api');
+    const [searchTerm, setSearchTerm] = useState('');
 
     const getResults = async (type) => {
         setIsLoading(true)

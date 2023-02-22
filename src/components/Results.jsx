@@ -10,11 +10,11 @@ export default function Results() {
   
 
   useEffect(() => {
-    if(searchTerm) {
+    if(searchTerm !== '') {
         if (location.pathname === '/search') {
-            getResults(`search?query=${searchTerm}&num=10&start=0&sort=relevance`)
+            getResults(`search?query=${searchTerm}&num=20&start=0&sort=relevance`)
         } else  if (location.pathname === '/imagesearch') {
-            getResults(`imagesearch?query=${searchTerm}&num=10&start=0&sort=relevance`)
+            getResults(`imagesearch?query=${searchTerm}&num=20&start=0&sort=relevance`)
         }
     }
     getResults('')
@@ -46,7 +46,7 @@ export default function Results() {
         return (<div className='flex flex-wrap justify-center items-center'>
             {results?.items?.map(({originalImageUrl, title, contextLink}, index) => (
             <a key={index} className='sm:p-3 p-5' href={contextLink} target='_blank' rel='noreferrer'>
-                <img src={originalImageUrl} alt='' loading='lazy'/>
+                <img src={originalImageUrl} alt='' loading='lazy' style={{maxHeight: 300, maxWidth: 300, height:300, width:300}}/>
                 <p className='w-36 break-words text-sm mt-2' >{title}</p>
 
             </a>))}
