@@ -4,7 +4,7 @@ import Search from './Search'
 
 export default function NavBar({setDarkTheme, darkTheme}) {
   return (
-    <div className='p-5 pb-0 flex flex-wrap sm:justify-between justify-center items-center border-b dark:border-gray-700 border-gray-200'>
+    <div className='py-5 lg:pb-0 flex flex-wrap justify-between lg:justify-around items-center border-b dark:border-gray-700 border-gray-200'>
       <div className='flex justify-between items-center space-x-5 w-screen'>
         <Link to='/'>
           <p className='text-2xl bg-blue-400 font-bold text-white py-1 px-2 rounded dark:bg-gray-500 dark:text-gray-200'>Search-Engine</p>
